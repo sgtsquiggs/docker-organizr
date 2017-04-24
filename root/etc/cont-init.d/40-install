@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+
+# fetch site
+[[ ! -d /config/www/organizr/.git ]] && \
+	git clone https://github.com/causefx/Organizr /config/www/organizr
+
+# permissions
+chown -R abc:abc \
+	/config/www
